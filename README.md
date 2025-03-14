@@ -39,3 +39,9 @@ Run the project
 ```
 python main.py
 ```
+
+## Run tests
+
+```
+python -m unittest tests.py
+```

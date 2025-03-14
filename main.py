@@ -28,8 +28,7 @@ async def on_ready():
 
 @bot.command(name="add_task", help="Add a new task")
 async def add_task(ctx, *, task_name):
-    task = Task(name=task_name)
-    await task.save()
+    await Task.create(name=task_name)
     message = f'Task added. To list all tasks use !show_tasks'
     await ctx.send(message)
 
@@ -69,6 +68,5 @@ async def delete_task(ctx, *, task_id):
     message = f"Task {task.id} deleted"
     await ctx.send(message)
 
-
-print(f"TOKEN: {TOKEN}")
-bot.run(TOKEN)
+if __name__ == "__main__":
+    bot.run(TOKEN)
