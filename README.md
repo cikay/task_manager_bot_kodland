@@ -19,29 +19,24 @@ TOKEN="your-token-goes-here"
 
 ## Run the project
 
-Create virtual env
+Create virtual and activate virtual env
 ```
-python3.10 -m venv venv
-```
-
-Activate env
-```
-source venv/bin/activate
+pipenv shell
 ```
 
 Install dependencies
 ```
-pip install -r requirements.txt
+pipenv install
 ```
 
 Run the project
 
 ```
-python main.py
+python -m task_manager_bot_kodland.main
 ```
 
 ## Run tests
 
 ```
-python -m unittest tests.py
+pytest tests
 ```
